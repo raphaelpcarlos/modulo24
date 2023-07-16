@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: cypress-io/github-action@v5
-        with:
-		   fetch-depth: 0
+        with: 
+          fetch-depth: 0
       - run: npm i
       - run: npm run start $
       - run: npx cypress run	  
@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5	
         with:
-		  fetch-depth: 0
-      - uses: 
-        with: wagoid/commitlint-github-action@v5
-		  token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v5
+        with: 
+          token: ${{ secrets.GITHUB_TOKEN }}
